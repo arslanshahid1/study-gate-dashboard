@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.navbar {
+    box-shadow: 0px 0px 8px rgb(160, 160, 160);
+    background-color: white;
+    height: 70px;
+}
+
+.navbar .nav-item {
+    border-right: 1px solid rgb(224, 224, 224);
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-item:last-child {
+    border: none;
+}
+
+.navbar .nav-item:hover {
+    background-color: #f6f6f6;
+    cursor: pointer;
+}
+
+.navbar a.nav-link {
+    color: gray;
+}
+
+.navbar .nav-item:hover a.nav-link {
+    color: #1cafec !important;
+}
+
+.navbar i.fa {
+    font-size: 20px;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.navbar .collapse {
+    background-color: white;
+    z-index: 2;
+    width: 100%;
+}
+
+@media screen and (max-width:992px) {
+    .navbar {
+        height: auto;
+    }
+    .navbar .nav-item {
+        border-bottom: 1px solid rgb(224, 224, 224);
+        border-right: 0;
+    }
+}
+
+
+/* ====================== Collapdable sidebar ======================== */
+
+#sidebar {
+    min-width: 270px;
+    max-width: 270px;
+    min-height: 100vh;
+    background: #343848;
+    color: rgb(214, 214, 214);
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    position: relative;
+}
+
+#sidebar button {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
+    background: #1a1c22;
+    color: rgb(214, 214, 214);
+}
+
+#sidebar button i {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+#sidebar.active {
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+}
+
+#sidebar.active ul.components li {
+    font-size: 14px;
+}
+
+#sidebar.active ul.components li a {
+    padding: 0;
+}
+
+#sidebar.active ul.components li a span.title {
+    display: none;
+}
+
+#sidebar.active ul.components li a span.fa {
+    margin-right: 0;
+    display: block;
+    font-size: 24px;
+    padding: 20px 0;
+}
+
+#sidebar ul.components {
+    padding: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+#sidebar ul li a {
+    padding: 20px;
+    font-size: 16px;
+    display: block;
+    color: rgb(185, 185, 185);
+    border-bottom: 1px solid rgb(43, 43, 43);
+    text-decoration: none;
+}
+
+#sidebar ul li a:hover {
+    border-left: 5px solid #1cafec;
+}
+
+#sidebar ul li a span.fa {
+    margin-right: 15px;
+}
+
+@media (max-width: 991.98px) {
+    #sidebar {
+        min-width: 270px;
+        max-width: 270px;
+        margin-left: 0px !important;
+    }
+    #sidebar.active {
+        margin-left: 0px !important;
+    }
+}
+
+@media screen and (max-width:786px) {
+    #sidebar button {
+        top: 25%;
+        -ms-transform: translateY(-25%);
+        transform: translateY(-25%);
+    }
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+
+/* ============================= Main content ============================== */
+
+#content {
+    width: 100%;
+}
+
+#content .top {
+    background-color: #f6f6f6;
+}
+
+.boxes-row .box {
+    border-radius: 5px;
+    border: 1px solid rgb(218, 218, 218);
+    background-color: white;
+    box-shadow: 0px 0px 50px rgb(202, 202, 202);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.boxes-row .box h3 {
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.boxes-row .box p {
+    color: rgb(146, 146, 146);
+}
+
+.boxes-row .box:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+    border-color: rgb(189, 189, 189);
+}
+
+.boxes-row2 .box1 {
+    background-color: #1cafec;
+    color: white;
+    border-radius: 5px;
+}
+
+.boxes-row2 .box2 {
+    background-color: #f1812d;
+    color: white;
+    border-radius: 5px;
+}
+
+
+/* ============================ Chat ========================== */
+
+.chat-btn {
+    background-color: #007db3;
+    color: white;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.chat-box input {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px;
+    background: none;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    display: none;
+}
+
+.chat-box {
+    position: fixed;
+    bottom: 85px;
+    right: 25px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.chat-box-open {
+    height: 350px;
+    width: 250px;
+    box-shadow: 0px 0px 5px rgb(197, 197, 197);
+}
+
+.chat-box-open input {
+    display: block;
+}
